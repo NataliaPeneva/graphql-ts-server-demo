@@ -7,12 +7,6 @@ export const typeDefs = gql`
   # clients can execute, along with the return type for each. In this
   # case, the "books" query returns an array of zero or more Books (defined above).
 
-  type Book {
-    id: String
-    title: String
-    author: String
-  }
-
   type Query {
     books: [Book]
     book(id: String): Book
@@ -20,5 +14,18 @@ export const typeDefs = gql`
 
   type Mutation {
     addBook(id: String, title: String, author: String): Book
+  }
+
+  type Book {
+    id: String!
+    title: String!
+    author: String!
+    category: Categories
+  }
+
+  enum Categories {
+    scifi
+    history
+    fantasy
   }
 `

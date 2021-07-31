@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "ts-node-dev --respawn --rs --transpile-only src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "gts lint",
     "clean": "gts clean",
@@ -11,8 +12,7 @@
     "fix": "gts fix",
     "prepare": "npm run compile",
     "pretest": "npm run compile",
-    "posttest": "npm run lint",
-    "dev": "ts-node-dev --respawn --rs --transpile-only src/index.ts"
+    "posttest": "npm run lint"
   },
   "author": "",
   "license": "ISC",
